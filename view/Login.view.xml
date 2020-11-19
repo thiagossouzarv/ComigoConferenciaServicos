@@ -10,7 +10,7 @@
                         <form:formContainers>
                             <form:FormContainer visible="true">
                                 <form:formElements>
-                                    <form:FormElement visible="true">
+                                    <form:FormElement visible="false">
                                         <form:label>
                                             <Label text="Código" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                         </form:label>
