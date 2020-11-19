@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZAPP_CONTROLE_SERVICOS_SRV" xml:lang="pt" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Funcionarios" sap:content-version="1">
+				<Key><PropertyRef Name="MatriculaFuncionario"/></Key><Property Name="MatriculaFuncionario" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Centro trabalho"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Hierarquia" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="FuncionariosId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="ID objeto"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NomeFuncionario" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Denominação"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="QtdServicos" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Supervisor" sap:content-version="1">
+				<Key><PropertyRef Name="Matricula"/></Key><Property Name="Senha" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Cargo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Nome hierarquia"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nomesupervisor" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Denominação"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matricula" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Centro trabalho"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Servicos" sap:content-version="1">
+				<Key><PropertyRef Name="NumerOrdem"/><PropertyRef Name="Matricula"/></Key><Property Name="NomeServico" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Texto breve"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Descricao" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DataInicio" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Válido desde"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PrioridadeServico" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Prioridade"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NumerOrdem" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Ordem" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matricula" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Login" sap:content-version="1">
+				<Key><PropertyRef Name="Senha"/></Key><Property Name="Codigo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="TermoPesq" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nome" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Nome 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Senha" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="QuantOrdensAberto" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityContainer Name="ZAPP_CONTROLE_SERVICOS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="FuncionariosSet" EntityType="ZAPP_CONTROLE_SERVICOS_SRV.Funcionarios" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="Supervisor" EntityType="ZAPP_CONTROLE_SERVICOS_SRV.Supervisor" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="ServicosSet" EntityType="ZAPP_CONTROLE_SERVICOS_SRV.Servicos" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="LoginSet" EntityType="ZAPP_CONTROLE_SERVICOS_SRV.Login" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self" href="https://fiori.dev.comigo.com.br:24587/sap/opu/odata/sap/ZAPP_CONTROLE_SERVICOS_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version" href="https://fiori.dev.comigo.com.br:24587/sap/opu/odata/sap/ZAPP_CONTROLE_SERVICOS_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

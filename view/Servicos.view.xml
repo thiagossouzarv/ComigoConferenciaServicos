@@ -1,0 +1,49 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.sap.build.standard.controleDeServicos.controller.Servicos" busy="false">
+	<Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" showHeader="true" title="{Matricula} - {Nomesupervisor} - ({Cargo})" showFooter="true" showNavButton="false" id="paginaservico" navButtonPress="_onPageNavButtonPress" cd:w5g.dt.context="/Supervisor">
+		<content>
+			<IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="__filter1">
+				<items>
+					<IconTabFilter icon="sap-icon://personnel-view" iconColor="Default" text="Equipe" count="" design="Horizontal" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<SearchField placeholder="Pesquisar" showSearchButton="true" visible="true" width="100%" search="handleSearch"/>
+							<VBox xmlns:mvc="sap.ui.core.mvc" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns="sap.m" width="100%" direction="Column" items="{ path: '/FuncionariosSet' }" id="listaFilas" busy="false">
+								<items busy="true">
+									<ObjectListItem type="Active" intro="{NomeFuncionario}" activeIcon="sap-icon://crm-service-manager" press="_onGenericTilePress" icon="sap-icon://crm-service-manager">
+										<firstStatus>
+											<ObjectStatus text="Matricula:" id="status2"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="{MatriculaFuncionario}" id="status3"/>
+										</secondStatus>
+									</ObjectListItem>
+								</items>
+							</VBox>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator icon="" iconDensityAware="false"/>
+					<IconTabFilter icon="sap-icon://list" iconColor="Positive" text="Lista de OS" count="" design="Horizontal" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+						<content>
+							<List id="listaServico" items="{ path: '/ServicosSet' }" mode="SingleSelectMaster" width="100%" headerText="Serviços Abertos" footerText="" backgroundDesign="Translucent" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" class="sapUiContentPadding" itemPress="_onStandardListItemPress">
+								<infoToolbar>
+									<Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+										<content>
+											<Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</content>
+									</Toolbar>
+								</infoToolbar>
+								<headerToolbar/>
+								<items>
+									<StandardListItem icon="sap-icon://notes" title="{NumerOrdem} - {Descricao}" info="Notificador: {Notificador}    Prioridade: {PrioridadeServico}" infoState="None" type="Active" selected="false" visible="true" description="{CentroCusto} - {NomeCentroCusto} "/>
+								</items>
+							</List>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator id="separator4"/>
+				</items>
+			</IconTabBar>
+		</content>
+		<headerContent/>
+		<subHeader/>
+		<customHeader/>
+	</Page>
+</mvc:View>

@@ -1,0 +1,50 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="com.sap.build.standard.prototypePatrimonio.controller.fragmento" displayBlock="true">
+	<Dialog id="Tela_Adicionar_Patrimonio" horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="Adicionar Operação" type="Standard" verticalScrolling="true">
+		<content>
+			<VBox width="100%" direction="Column" >
+				<items>
+					<form:Form xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" width="100%" editable="true" visible="true" >
+						<form:formContainers>
+							<form:FormContainer visible="true">
+								<form:formElements>
+									<form:FormElement xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" visible="true">
+										<form:label>
+											<Label xmlns="sap.m" text="Ordem" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true" />
+										</form:label>
+										<form:fields>
+											<ComboBox  items="{ path: '/ServicosSet' }" placeholder="Adicionar Ordem" editable="true" enabled="true" visible="true" width="355px" maxWidth="500px" id="listafun2" fieldGroupIds="listafun2" busy="true">
+										<items>
+											<core:Item text="{Descricao} / {NumerOrdem}" key="{Descricao}" enabled="true"/>
+										</items>
+									</ComboBox>
+										</form:fields>
+									</form:FormElement>
+									<form:FormElement xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" visible="true" >
+										<form:label>
+											<Label xmlns="sap.m" text="Descrição da Operação" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+										</form:label>
+										<form:fields>
+											<TextArea xmlns="sap.m" placeholder="Descrição breve" value="" id="area2" rows="4"/>
+										</form:fields>
+									</form:FormElement>
+								</form:formElements>
+								<form:title/>
+							</form:FormContainer>
+						</form:formContainers>
+						<form:layout>
+							<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12" />
+						</form:layout>
+					</form:Form>
+				</items>
+			</VBox>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="Adicionar" type="Default" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="ConcluirOperacao" activeIcon="sap-icon://add"/>
+		    <Button text="Voltar" type="Default" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="close" activeIcon="sap-icon://add"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,150 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.controleDeServicos.controller.Servicos" xmlns="sap.m">
+    <Page showHeader="true" title="Responsive Page Title" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items/>
+                <layoutData/>
+            </VBox>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://personnel-view" iconColor="Default" text="Funcionarios" count="" design="Horizontal" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <VBox alignItems="Center" direction="Column" fitContainer="false" width="751px" height="82.109375px" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false" class="sapUiTinyMargin">
+                                <items>
+                                    <Title text="Mecânica" titleStyle="H1" width="auto" textAlign="Begin" visible="true" wrapping="false"/>
+                                    <Image src="/webapp/resources/qq.png" height="2px" width="120px" visible="true" densityAware="false"/>
+                                    <Title text="Carlos Luiz" titleStyle="H3" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiTinyMargin"/>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                            <VBox alignItems="Stretch" direction="Inherit" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false" class="sapUiTinyMargin">
+                                <items>
+                                    <GenericTile header="Luiz Zamboni" subheader="" frameType="OneByOne" press="_onGenericTilePress">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="3" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="jorge" subheader="" frameType="OneByOne">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="3" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Lucas Carlos" subheader="" frameType="OneByOne">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="6" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                            <VBox alignItems="Stretch" direction="Inherit" fitContainer="false" width="auto" height="auto" justifyContent="SpaceAround" renderType="Div" visible="true" displayInline="false" class="sapUiTinyMargin">
+                                <items>
+                                    <GenericTile header="pupak" subheader="" frameType="OneByOne">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="3" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="tiagao" subheader="" frameType="OneByOne">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="3" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                    <GenericTile header="Luiz Zamboni" subheader="" frameType="OneByOne">
+                                        <tileContent>
+                                            <TileContent footer="Servicos" unit="">
+                                                <content>
+                                                    <NumericContent value="3" valueColor="Neutral" indicator="None" icon="sap-icon://crm-service-manager"/>
+                                                </content>
+                                            </TileContent>
+                                        </tileContent>
+                                    </GenericTile>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://list" iconColor="Positive" text="OS Abertas" count="" design="Horizontal" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto" class="sapUiTinyMargin"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Serviços Abertos" footerText="" backgroundDesign="Translucent" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" class="sapUiContentPadding" itemPress="_onStandardListItemPress">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 1" description="Description 1" info="Info 1" infoState="None" type="Active" selected="false" visible="true" press="_onStandardListItemPress1"/>
+                                    <StandardListItem icon="sap-icon://message-success" title="Serviço 2" description="Description 2" info="Info 2" infoState="Success" type="Active" selected="false" visible="true" press="_onStandardListItemPress2"/>
+                                    <StandardListItem icon="sap-icon://message-error" title="Serviço 3" description="Description 3" info="Info 3" infoState="Error" type="Active" selected="false" visible="true" press="_onStandardListItemPress3"/>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 4" description="Description" info="Info" infoState="Success" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 5" description="Description" info="Info" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://list" iconColor="Critical" text="OS em Andamento" count="" design="Horizontal" showAll="false" textDirection="Inherit" enabled="true" visible="true" tooltip="" iconDensityAware="false">
+                        <content>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto" class="sapUiTinyMargin"/>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Serviços Abertos" footerText="" backgroundDesign="Translucent" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" class="sapUiContentPadding" itemPress="_onStandardListItemPress4">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 1" description="Description 1" info="Info 1" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://message-success" title="Serviço 2" description="Description 2" info="Info 2" infoState="Success" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://message-error" title="Serviço 3" description="Description 3" info="Info 3" infoState="Error" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 4" description="Description" info="Info" infoState="Success" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://notes" title="Serviço 5" description="Description" info="Info" infoState="None" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                </items>
+                <content>
+                    <Text text="" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </IconTabBar>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Button text="Voltar" type="Emphasized" iconFirst="true" width="25%" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

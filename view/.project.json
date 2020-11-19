@@ -1,0 +1,22 @@
+{
+    "dataBinding": {
+        "/webapp/view/Login.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Servicos.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Funcionario.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/ActionSheet1.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Descricao.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Fun.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

@@ -1,0 +1,46 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" controllerName="com.sap.build.standard.controleDeServicos.controller.Fun" fieldGroupIds="listafun3">
+	<Dialog horizontalScrolling="true" showHeader="true" state="None" stretch="false" title="Adicionar Operação" type="Standard" verticalScrolling="true">
+		<content>
+			<form:Form width="100%" editable="true" visible="true">
+				<form:formContainers>
+					<form:FormContainer visible="true">
+						<form:formElements>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="Funcionarios" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+								<form:fields>
+									<ComboBox items="{/FuncionariosSet}" placeholder="Funcionario" editable="true" enabled="true" visible="true" width="355px" maxWidth="500px" id="listafun" fieldGroupIds="listafun" busy="true">
+										<items>
+											<core:Item text="{MatriculaFuncionario} - {NomeFuncionario} " key="{MatriculaFuncionario}" id = "matriculafun" enabled="true"/>
+										</items>
+									</ComboBox>
+								</form:fields>
+							</form:FormElement>
+							<form:FormElement visible="true">
+								<form:label>
+									<Label text="Descrição da Operação" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+								</form:label>
+							<form:fields>
+							    <TextArea xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns="sap.m" placeholder="Descrição breve" value="" rows="4" id="area0"/>
+							</form:fields>
+							</form:FormElement>
+						</form:formElements>
+						<form:title/>
+					</form:FormContainer>
+				</form:formContainers>
+				<form:layout>
+					<form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+				</form:layout>
+			</form:Form>
+		</content>
+		<beginButton/>
+		<buttons>
+			<Button text="Adicionar" type="Default" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="ConcluirOperacao" activeIcon="sap-icon://add"/>
+			<Button xmlns="sap.m" text="Voltar" press="close" id="button1" width="100px"/>
+		</buttons>
+		<customHeader/>
+		<endButton/>
+		<subHeader/>
+	</Dialog>
+</core:FragmentDefinition>

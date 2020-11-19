@@ -1,0 +1,93 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.controleDeServicos.controller.Funcionario" xmlns:uxap="sap.uxap" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
+        <uxap:headerContent>
+            <VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="53px" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="23px" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="ID:" width="30px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Link href="" text="26396" textAlign="Left" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                    <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Email:" width="49px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                            <Link text="zamboni@sap.com" textAlign="Begin" width="127px" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                        </items>
+                        <layoutData/>
+                    </HBox>
+                </items>
+                <layoutData/>
+            </VBox>
+            <Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+        </uxap:headerContent>
+        <uxap:headerTitle>
+            <uxap:ObjectPageHeader objectImageURI="/webapp/resources/download.png" objectTitle="Luiz Fernando Zamboni" objectSubtitle="Mecânica" headerDesign="Light" objectImageShape="Circle" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+                <uxap:actions>
+                    <Button text="Voltar" type="Emphasized" iconFirst="true" width="104px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </uxap:actions>
+                <uxap:breadCrumbsLinks/>
+                <uxap:navigationBar/>
+            </uxap:ObjectPageHeader>
+        </uxap:headerTitle>
+        <uxap:sections>
+            <uxap:ObjectPageSection showTitle="true" title="" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Serviços" mode="Expanded">
+                        <uxap:blocks>
+                            <tnt:NavigationList width="auto" expanded="true">
+                                <tnt:items>
+                                    <tnt:NavigationListItem icon="sap-icon://employee" expanded="true" hasExpander="true" text="Item 1">
+                                        <tnt:items>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 1"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 2"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 3"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 4"/>
+                                        </tnt:items>
+                                    </tnt:NavigationListItem>
+                                    <tnt:NavigationListItem icon="sap-icon://building" expanded="true" hasExpander="true" text="Item 2">
+                                        <tnt:items>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 1"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 2"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 3"/>
+                                            <tnt:NavigationListItem expanded="true" hasExpander="true" text="Sub Item 4"/>
+                                        </tnt:items>
+                                    </tnt:NavigationListItem>
+                                </tnt:items>
+                            </tnt:NavigationList>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection showTitle="true" title="" titleUppercase="true" visible="true">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection title="Adicionar Operação" mode="Expanded">
+                        <uxap:blocks>
+                            <VBox alignItems="Center" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Center" renderType="Div" visible="true" displayInline="false">
+                                <items>
+                                    <ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                        <items>
+                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                        </items>
+                                    </ComboBox>
+                                    <Button text="Adicionar" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                                </items>
+                                <layoutData/>
+                            </VBox>
+                        </uxap:blocks>
+                        <uxap:moreBlocks/>
+                        <uxap:actions/>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+                <uxap:customAnchorBarButton/>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+        <uxap:footer/>
+    </uxap:ObjectPageLayout>
+</mvc:View>
